@@ -1,0 +1,57 @@
+Journal Output when jenkins status 
+journalctl -xe
+Jan 23 
+
+11:15:51 ip-172-31-83-233 systemd[1]: Starting LSB: Start Jenkins at boot time...
+Jan 23 11:15:52 ip-172-31-83-233 jenkins[788]: Correct java version found
+Jan 23 11:15:52 ip-172-31-83-233 jenkins[788]:  * Starting Jenkins Automation Server jenkins
+Jan 23 11:15:52 ip-172-31-83-233 su[896]: Successful su for jenkins by root
+Jan 23 11:15:52 ip-172-31-83-233 su[896]: + ??? root:jenkins
+Jan 23 11:15:52 ip-172-31-83-233 su[896]: pam_unix(su:session): session opened for user jenkins by (uid=0)
+Jan 23 11:15:53 ip-172-31-83-233 su[896]: pam_unix(su:session): session closed for user jenkins
+Jan 23 11:15:54 ip-172-31-83-233 jenkins[788]:    ...done.
+Jan 23 11:15:54 ip-172-31-83-233 systemd[1]: Started LSB: Start Jenkins at boot time.
+ubuntu@ip-172-31-83-233:~$ journalctl -xe
+Jan 23 13:40:03 ip-172-31-83-233 sshd[14628]: Disconnected from invalid user test 165.227.160.144 port 58010 [preauth]
+Jan 23 13:40:06 ip-172-31-83-233 sudo[14630]:   ubuntu : TTY=pts/0 ; PWD=/home/ubuntu ; USER=root ; COMMAND=/usr/bin/apt-get update
+Jan 23 13:40:06 ip-172-31-83-233 sudo[14630]: pam_unix(sudo:session): session opened for user root by ubuntu(uid=0)
+Jan 23 13:40:08 ip-172-31-83-233 sudo[14630]: pam_unix(sudo:session): session closed for user root
+Jan 23 13:40:27 ip-172-31-83-233 sudo[14935]:   ubuntu : TTY=pts/0 ; PWD=/home/ubuntu ; USER=root ; COMMAND=/bin/systemctl status jenkins
+Jan 23 13:40:27 ip-172-31-83-233 sudo[14935]: pam_unix(sudo:session): session opened for user root by ubuntu(uid=0)
+Jan 23 13:40:27 ip-172-31-83-233 sudo[14935]: pam_unix(sudo:session): session closed for user root
+Jan 23 13:40:28 ip-172-31-83-233 kernel: [UFW BLOCK] IN=eth0 OUT= MAC=12:b0:ee:b6:86:4d:12:ee:c4:5b:39:b5:08:00 SRC=45.134.26.236 DST=172.31.83.233 LEN=40 TOS=0x08 PREC
+Jan 23 13:40:45 ip-172-31-83-233 sudo[14938]:   ubuntu : TTY=pts/0 ; PWD=/home/ubuntu ; USER=root ; COMMAND=/bin/systemctl start jenkins
+Jan 23 13:40:45 ip-172-31-83-233 sudo[14938]: pam_unix(sudo:session): session opened for user root by ubuntu(uid=0)
+Jan 23 13:40:45 ip-172-31-83-233 sudo[14938]: pam_unix(sudo:session): session closed for user root
+Jan 23 13:40:47 ip-172-31-83-233 sshd[14941]: Invalid user test from 165.227.160.144 port 38610
+Jan 23 13:40:47 ip-172-31-83-233 sshd[14941]: Received disconnect from 165.227.160.144 port 38610:11: Normal Shutdown, Thank you for playing [preauth]
+Jan 23 13:40:47 ip-172-31-83-233 sshd[14941]: Disconnected from invalid user test 165.227.160.144 port 38610 [preauth]
+Jan 23 13:40:48 ip-172-31-83-233 kernel: [UFW BLOCK] IN=eth0 OUT= MAC=12:b0:ee:b6:86:4d:12:ee:c4:5b:39:b5:08:00 SRC=185.200.118.90 DST=172.31.83.233 LEN=40 TOS=0x08 PRE
+Jan 23 13:41:00 ip-172-31-83-233 sudo[14943]:   ubuntu : TTY=pts/0 ; PWD=/home/ubuntu ; USER=root ; COMMAND=/bin/systemctl enable jenkins
+Jan 23 13:41:00 ip-172-31-83-233 sudo[14943]: pam_unix(sudo:session): session opened for user root by ubuntu(uid=0)
+Jan 23 13:41:00 ip-172-31-83-233 systemd[1]: Reloading.
+Jan 23 13:41:00 ip-172-31-83-233 systemd[1]: Reloading.
+Jan 23 13:41:00 ip-172-31-83-233 systemd[1]: Reloading.
+Jan 23 13:41:00 ip-172-31-83-233 sudo[14943]: pam_unix(sudo:session): session closed for user root
+Jan 23 13:41:03 ip-172-31-83-233 kernel: [UFW BLOCK] IN=eth0 OUT= MAC=12:b0:ee:b6:86:4d:12:ee:c4:5b:39:b5:08:00 SRC=45.146.166.115 DST=172.31.83.233 LEN=40 TOS=0x08 PRE
+Jan 23 13:41:31 ip-172-31-83-233 sshd[15029]: Invalid user test from 165.227.160.144 port 47444
+Jan 23 13:41:31 ip-172-31-83-233 sshd[15029]: Received disconnect from 165.227.160.144 port 47444:11: Normal Shutdown, Thank you for playing [preauth]
+Jan 23 13:41:31 ip-172-31-83-233 sshd[15029]: Disconnected from invalid user test 165.227.160.144 port 47444 [preauth]
+Jan 23 13:41:39 ip-172-31-83-233 kernel: [UFW BLOCK] IN=eth0 OUT= MAC=12:b0:ee:b6:86:4d:12:ee:c4:5b:39:b5:08:00 SRC=45.146.166.111 DST=172.31.83.233 LEN=40 TOS=0x08 PRE
+Jan 23 13:41:51 ip-172-31-83-233 kernel: [UFW BLOCK] IN=eth0 OUT= MAC=12:b0:ee:b6:86:4d:12:ee:c4:5b:39:b5:08:00 SRC=58.76.170.157 DST=172.31.83.233 LEN=564 TOS=0x00 PRE
+Jan 23 13:42:09 ip-172-31-83-233 kernel: [UFW BLOCK] IN=eth0 OUT= MAC=12:b0:ee:b6:86:4d:12:ee:c4:5b:39:b5:08:00 SRC=104.211.136.96 DST=172.31.83.233 LEN=60 TOS=0x00 PRE
+Jan 23 13:42:15 ip-172-31-83-233 sshd[15031]: Invalid user test from 165.227.160.144 port 56282
+Jan 23 13:42:15 ip-172-31-83-233 sshd[15031]: Received disconnect from 165.227.160.144 port 56282:11: Normal Shutdown, Thank you for playing [preauth]
+Jan 23 13:42:15 ip-172-31-83-233 sshd[15031]: Disconnected from invalid user test 165.227.160.144 port 56282 [preauth]
+Jan 23 13:42:29 ip-172-31-83-233 kernel: [UFW BLOCK] IN=eth0 OUT= MAC=12:b0:ee:b6:86:4d:12:ee:c4:5b:39:b5:08:00 SRC=68.183.235.177 DST=172.31.83.233 LEN=40 TOS=0x00 PRE
+Jan 23 13:42:39 ip-172-31-83-233 sudo[15034]:   ubuntu : TTY=pts/0 ; PWD=/home/ubuntu ; USER=root ; COMMAND=/bin/systemctl status jenkins
+Jan 23 13:42:39 ip-172-31-83-233 sudo[15034]: pam_unix(sudo:session): session opened for user root by ubuntu(uid=0)
+Jan 23 13:42:39 ip-172-31-83-233 sudo[15034]: pam_unix(sudo:session): session closed for user root
+Jan 23 13:42:40 ip-172-31-83-233 sshd[15037]: Invalid user admin from 23.83.239.130 port 33378
+Jan 23 13:42:40 ip-172-31-83-233 sshd[15037]: Received disconnect from 23.83.239.130 port 33378:11: Bye Bye [preauth]
+Jan 23 13:42:40 ip-172-31-83-233 sshd[15037]: Disconnected from invalid user admin 23.83.239.130 port 33378 [preauth]
+Jan 23 13:42:44 ip-172-31-83-233 kernel: [UFW BLOCK] IN=eth0 OUT= MAC=12:b0:ee:b6:86:4d:12:ee:c4:5b:39:b5:08:00 SRC=5.188.159.169 DST=172.31.83.233 LEN=40 TOS=0x08 PREC
+Jan 23 13:42:57 ip-172-31-83-233 sshd[15039]: Invalid user test from 165.227.160.144 port 36880
+Jan 23 13:42:57 ip-172-31-83-233 sshd[15039]: Received disconnect from 165.227.160.144 port 36880:11: Normal Shutdown, Thank you for playing [preauth]
+Jan 23 13:42:57 ip-172-31-83-233 sshd[15039]: Disconnected from invalid user test 165.227.160.144 port 36880 [preauth]
+Jan 23 13:43:01 ip-172-31-83-233 kernel: [UFW BLOCK] IN=eth0 OUT= MAC=12:b0:ee:b6:86:4d:12:ee:c4:5b:39:b5:08:00 SRC=89.248.163.164 DST=172.31.83.233 LEN=40 TOS=0x00 PRE
