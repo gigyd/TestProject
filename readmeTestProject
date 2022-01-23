@@ -1,0 +1,18 @@
+CI/CD 
+Pipeline production Application
+Tools:Jenkins,Snyk,Docker for containerization,(Selenium for testing), (Ansible), AWS servers Ubuntu 18.4
+CI/CD - Test - Main -Feedback CI/CD
+website https://github.com/hshar/website.git
+Pipeline
+Orchestration Docker; Docker file should be built every time there is a push to Git-Hub
+Feature branching
+If commit is made to master branch, test and push to production
+If commit is made to develop branch, just test the product, do not push to product
+
+
+Initial steps:
+1. Launch 2 EC2 Ubuntu 18.4
+2. Install java
+3. Install Jenkins --> failed
+4. Create Pipeline
+4. Install Docker on both servers
